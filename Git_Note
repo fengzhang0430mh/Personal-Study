@@ -1,0 +1,43 @@
+# return to previous edition
+git reset -- hard commit_id
+# check history
+
+# check commit history
+
+# cehck log history
+git log
+
+# revote revision
+Scenario 1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时（还没有add），用命令
+git checkout -- file。
+
+Scenrio 2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改（已经add，还没有commit），分两步，第一步用命令
+git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
+
+Scenrio 3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节（已经commit，但还没有push）
+
+
+# file delete
+## delete 
+git rm test.txt
+
+## recover the deleted file
+git checkout -- test.txt
+
+# create and switch branch
+1 git checkout -b <name>
+2 git switch -c <name>
+
+# merge change
+git merge
+
+# branch delete
+git branch -d <name>
+
+# merge with information, using --no-ff (no fast forwarding)
+git merge --no-ff -m "merge with no-ff" dev
+
+# delete branch without merging
+git branch -D <name>
+
+
