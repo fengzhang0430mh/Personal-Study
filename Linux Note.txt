@@ -1,0 +1,1 @@
+Linux Noteecho "aa bb cc" >> small.txt
